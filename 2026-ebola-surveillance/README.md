@@ -52,16 +52,12 @@ gunzip ebola.fna.gz
 
 ## IGV
 
-Ahhoz hogy IGV-ben csak mRNS-t mutassa, a .gff fájlt át kell írni úgy hogy csak az mRNS legyen benne
-szűrés, mRNA tartsuk meg
+TO display only mRNA or CDS by IGV, the .gff file needs to be modified
 
 ```
+	#to display only mRNA
     awk -F'\t' '$0 ~ /^#/ || ($3 == "mRNA")' ebola-mayinga-annotation.gff > ebola-mayinga-mrna-only.gff
-```
-
-Szűrés, CDS tartsuk meg
-
-```
+	#to display only CDS
     awk -F'\t' '$0 ~ /^#/ || ($3 == "CDS")' ebola-mayinga-annotation.gff > ebola-mayinga-CDS-only.gff
 ```
 
@@ -69,9 +65,6 @@ Szűrés, CDS tartsuk meg
 ```
     seqkit stats ebola-mayinga-genome.fasta
 ```
-
-#### FASTQ
-A FASTQ egy kimenet (FASTA és GFF azok a bemeneti fájlok, amit tudunk, ez maga a mérés).
 
 # Day2
 
