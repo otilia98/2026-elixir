@@ -39,22 +39,16 @@ curl $GFF_URL > ebola-mayinga-annotation.gff.gz
 gunzip ebola-mayinga-annotation.gff.gz
 ```
 
-#### másik módszerrel
+#### Other way
 
-```
 URL=https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/848/505/GCF_000848505.1_ViralProj14703/GCF_000848505.1_ViralProj14703_genomic.fna.gz
 
 GENOME=ebola.genome.fna.gz
 
-download:
-curl -o $(GENOME) $(URL)
-```
-
-Nem működött nekem a .fa kiterjesztésű refgenom megnyitással az igv, ezért letöltöttük az .fna fájl és így már működött! igazából ez az a fájl csak nem fastának neveztem át
-
 ```
 curl https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/848/505/GCF_000848505.1_ViralProj14703/GCF_000848505.1_ViralProj14703_genomic.fna.gz > ebola.fna.gz
-
+download:
+curl -o $(GENOME) $(URL)
 gunzip ebola.fna.gz
 ```
 
@@ -202,6 +196,6 @@ BLAST
 ```
 
 # Useful links
-## The Genetic Codes: https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi
-## The HGV Nomenclature: https://hgvs-nomenclature.org/stable/
+### The Genetic Codes: https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi
+### The HGV Nomenclature: https://hgvs-nomenclature.org/stable/
 
