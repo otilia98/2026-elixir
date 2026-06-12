@@ -69,10 +69,9 @@ Generate statistics on the genome.
 
 # Day 2
 
-#### Link - https://www.ncbi.nlm.nih.gov/sra/SRX994253[accn]
-#### SRA number - SRR1972976
-#### Link number - PRJNA257197
-#### SRA Experiments - 891-re katitntani
+Link - https://www.ncbi.nlm.nih.gov/sra/SRX994253[accn]
+SRA number - SRR1972976
+Link number - PRJNA257197
 
 Get the metadata for a run
 ```
