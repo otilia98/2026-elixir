@@ -1,5 +1,6 @@
-# Ebola
-## Ebola virus genome
+# Day 1
+## Ebola project
+### Ebola virus genome
 
 NCBI link: [https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000848505.1/](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000848505.1/)
 
@@ -66,7 +67,7 @@ Generate statistics on the genome.
     seqkit stats ebola-mayinga-genome.fasta
 ```
 
-# Day2
+# Day 2
 
 #### Link - https://www.ncbi.nlm.nih.gov/sra/SRX994253[accn]
 #### SRA number - SRR1972976
@@ -149,7 +150,7 @@ GFF_URL=https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/848/505/GCF_000848505.1
     cat SRR1972957.sorted.flagstat
 ```
 
-# Day3
+# Day 3
 ## Don't forget
 Extract the first 20 FASTQ records and convert to FASTA for BLAST search on NCBI to find out which sequences are in the FASTQ file
 ```
