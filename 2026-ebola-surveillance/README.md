@@ -7,31 +7,31 @@ ACCESSION: GCA_000848505.1
 
 Genome: [https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/848/505/GCF_000848505.1_ViralProj14703/](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/848/505/GCF_000848505.1_ViralProj14703/)
 
-#### The URL to the genome.
+The URL to the genome.
 
 ```
 FASTA_URL=https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/848/505/GCF_000848505.1_ViralProj14703/GCF_000848505.1_ViralProj14703_genomic.fna.gz
 ```
 
-#### The URL to the annotation.
+The URL to the annotation.
 
 ```
 GFF_URL=https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/848/505/GCF_000848505.1_ViralProj14703/GCF_000848505.1_ViralProj14703_genomic.gff.gz
 ```
 
-#### Download the genome
+Download the genome
 
 ```
 curl $FASTA_URL > ebola-mayinga-genome.fasta
 ```
 
-#### Download the annotation.
+Download the annotation.
 
 ```
 curl $GFF_URL > ebola-mayinga-annotation.gff.gz
 ```
 
-#### Unzip the annotation.
+Unzip the annotation.
 
 ```
 gunzip ebola-mayinga-annotation.gff.gz
@@ -61,7 +61,7 @@ TO display only mRNA or CDS by IGV, the .gff file needs to be modified
     awk -F'\t' '$0 ~ /^#/ || ($3 == "CDS")' ebola-mayinga-annotation.gff > ebola-mayinga-CDS-only.gff
 ```
 
-#### Generate statistics on the genome.
+Generate statistics on the genome.
 ```
     seqkit stats ebola-mayinga-genome.fasta
 ```
@@ -73,42 +73,41 @@ TO display only mRNA or CDS by IGV, the .gff file needs to be modified
 #### Link number - PRJNA257197
 #### SRA Experiments - 891-re katitntani
 
-#### Get the metadata for a run
+Get the metadata for a run
 ```
     bio search SRR1972976
 ```
-#### Get all runs for a project
+Get all runs for a project
 ```
     bio search PRJNA257197
 ```
-#### Metadata for bioproject - header is legyen!
+Metadata for bioproject - header is legyen!
 ```
      bio search PRJNA257197 --csv -H > samples.csv
 ```
-#### Watch samples.csv directly in the terminal 
+Watch samples.csv directly in the terminal 
 ```
     pixi add xan
     xan view samples.csv
  ```   
-#### Show first 10 row and 2 column in terminal  
+Show first 10 row and 2 column in terminal  
 ```
 	xan view -s run_accession,info samples.csv | head
 ```
-#### Make the directory for the FASTQ files
+Make the directory for the FASTQ files
 ```
     mkdir -p fastq
 ```
-#### Obtain the first 100,000 reads
+Obtain the first 100,000 reads
 ```
     fastq-dump -X 100000 --outdir fastq --split-files SRR1972976
 ```
 
-### The URL to the genome
+#### The URL to the genome and annotation
     FASTA_URL=https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/848/505/GCF_000848505.1_ViralProj14703/GCF_000848505.1_ViralProj14703_genomic.fna.gz
 
-### The URL to the annotation.
-
 GFF_URL=https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/848/505/GCF_000848505.1_ViralProj14703/GCF_000848505.1_ViralProj14703_genomic.gff.gz
+
 ```
     #The simpler name for the genome.
     GENOME_NAME=ebola-mayinga
