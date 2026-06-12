@@ -58,23 +58,28 @@ curl https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/848/505/GCF_000848505.1_Vi
 gunzip ebola.fna.gz
 ```
 
-## IGV dolgok
+## IGV
 
-Ahhoz hogy IGV-ben csak mRNS-t mutassa, a .gff fájét át kell írni úgy hogy csak az mRNS legyen benne
+Ahhoz hogy IGV-ben csak mRNS-t mutassa, a .gff fájlt át kell írni úgy hogy csak az mRNS legyen benne
 szűrés, mRNA tartsuk meg
 
+```
     awk -F'\t' '$0 ~ /^#/ || ($3 == "mRNA")' ebola-mayinga-annotation.gff > ebola-mayinga-mrna-only.gff
+```
 
 Szűrés, CDS tartsuk meg
 
+```
     awk -F'\t' '$0 ~ /^#/ || ($3 == "CDS")' ebola-mayinga-annotation.gff > ebola-mayinga-CDS-only.gff
+```
 
 #### Generate statistics on the genome.
+```
     seqkit stats ebola-mayinga-genome.fasta
+```
 
 #### FASTQ
 A FASTQ egy kimenet (FASTA és GFF azok a bemeneti fájlok, amit tudunk, ez maga a mérés).
-
 
 # 2. nap - mérések
 
