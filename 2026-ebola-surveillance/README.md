@@ -6,8 +6,6 @@ NCBI link: [https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000848505.1/](https
 ACCESSION: GCA_000848505.1
 
 Genome: [https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/848/505/GCF_000848505.1_ViralProj14703/](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/848/505/GCF_000848505.1_ViralProj14703/)
-GCF_000848505.1_ViralProj14703_rna_from_genomic.fna.gz
-(itt FTP -re kell kattintani fent és beugranak a letölthető fájlok)
 
 #### The URL to the genome.
 
